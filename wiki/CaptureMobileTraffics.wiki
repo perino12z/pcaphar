@@ -1,4 +1,4 @@
-#Capture mobile web traffics using WiFi hotspot.
+Capture mobile web traffics using WiFi hotspot.
 
 = Introduction =
 

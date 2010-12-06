@@ -1,0 +1,49 @@
+#Capture mobile web traffics using WiFi hotspot.
+
+= Introduction =
+
+Many web traffic analysis tools exist for modern desktop browsers -- IE, Firefox, Chrome. There is none such tool exists for mobile browsers, such as Safari on iPhone, or browser of Andriod. What we can do is to set up an private WiFi network, connect the mobile device to the network, capture the traffics, and then analyze the traffics. 
+
+= Apple MacBook =
+
+== Setup wifi hotspot ==
+
+  # click the wireless icon in the MacBook menu bar
+    * enter a name for the network - “hot1” in this example
+  # open System Preferences -> Sharing on the MacBook
+    * select Internet Sharing on the LHS
+    * choose “Ethernet” for “Share your connection from”
+    * choose “AirPort” for “To computers using”
+    * click “AirPort Options”
+      # type a name for your network (“hot1” again)
+      # do NOT enable encryption
+      # click OK
+    * check the Internet Sharing checkbox
+    * click Start when asked “Are you sure you want to turn on Internet sharing?”
+
+The wifi hotspot should be available.
+
+== Start capturing TCP traffic ==
+
+  # open a terminal on the Mac
+  # Run this command. Specify any filename you want as “yourfilename.pcap”.
+  {{{
+  sudo tcpdump -i en1 -n -s 0 -w yourfilename.pcap tcp or port 53
+  }}}
+
+Leave tcpdump running. We’ll come back later to stop this and harvest the pcap file.
+
+= Connect mobile device to hotspot =
+
+On your mobile device connect to the wifi hotspot specified above (“hot1” in our example).
+Now, any websites you visit on your mobile device should be captured by tcpdump.
+
+= Clear the browser cache =
+
+ # iPhone
+ Settings -> Safari:
+   look for "Clear History", "Clear Cookie", and "Clear Cache"
+
+ # Android
+ Open Broswer -> Memu -> More -> Settings:
+   look for "Clear cache", " Clear history", and "Clear all cookie data".

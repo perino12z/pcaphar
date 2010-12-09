@@ -1,8 +1,8 @@
 #summary How to use the pcaphar AppEngine Service.
 
-To use the pcaphar AppEngine service, go to http://pcaphar.appspot.com.
+To use the pcaphar !AppEngine service, go to http://pcaphar.appspot.com.
   # Choose your pcap file to convert
   # Check if you want the cookies in you pcap to be preserved in the generated HAR format. If you don't want preserve the cookies, make sure the checkbox is checked (default).
   # Click button "Convert" to convert your pcap file.
 
-After your pcap file is converted, your can looked at the generated HAR on the page, you can also download it by clicking the "download" link, and you can view the waterfall char of the HAR by clicking the "HarViewer" link.
+After your pcap file is converted, your can looked at the generated HAR on the page, you can also download it by clicking the "download" link, and you can view the waterfall char of the HAR by clicking the "!HarViewer" link.
